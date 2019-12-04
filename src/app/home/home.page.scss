@@ -1,1 +1,53 @@
+ion-card.percentage {
+	padding: 15px 15px;
 
+	.title {
+		margin: 0;
+		$margin: 8px;
+		margin-bottom: $margin;
+	}
+
+	div.bar {
+		height: 20px;
+		border-radius: 5px;
+		overflow: hidden;
+
+		transition: width 0.5s ease-in-out;
+
+		div.bar-inner {
+			display: block;
+			width: 100vw;
+			height: 100%;
+
+			position: relative;
+			left: 50vw;
+			transform: translateX(-50%);
+			background: linear-gradient(to right, #4776e6, #8e54e9);
+			// background: linear-gradient(to left, #009fff, #ec2f4b);
+		}
+	}
+
+	p.distance {
+		margin: 0;
+		margin-top: 6px;
+		text-align: right;
+	}
+}
+
+ion-card.options {
+	display: flex;
+	ion-button.action {
+		width: 50%;
+		height: 100px;
+
+		ion-icon {
+			--ion-color-base: #232323 !important;
+		}
+
+		p.label {
+			display: block;
+			width: fit-content;
+			padding: 0 4px;
+		}
+	}
+}

@@ -1,14 +1,30 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
-  </ion-toolbar>
+	<ion-toolbar>
+		<ion-title>
+			Kattemat beholder
+		</ion-title>
+	</ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <div class="ion-padding">
-    The world is your oyster.
-    <p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs/">docs</a> will be your guide.</p>
-  </div>
+	<ion-refresher (ionRefresh)="refresh($event)" slot="fixed" pullFactor="0.5" pullMin="50" pullMax="200">
+		<ion-refresher-content></ion-refresher-content>
+	</ion-refresher>
+	<ion-card class="percentage">
+		<h2 class="title">{{ percent }}% igjen</h2>
+		<div class="bar" [ngStyle]="{ 'width': percent + '%' }">
+			<div class="bar-inner"></div>
+		</div>
+		<p class="distance">Distance: {{ dist }} cm</p>
+	</ion-card>
+	<ion-card class="options">
+		<ion-button fill="none" color="light" solid class="action buy-more">
+			<ion-icon color="dark" name="cart"></ion-icon>
+			<p class="label">Kjøp mer mat</p>
+		</ion-button>
+		<ion-button fill="none" color="light" solid class="action fill-up">
+			<ion-icon color="dark" name="add-circle-outline"></ion-icon>
+			<p class="label">Fyll på mat</p>
+		</ion-button>
+	</ion-card>
 </ion-content>
