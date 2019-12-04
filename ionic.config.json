@@ -1,5 +1,7 @@
 {
   "name": "kattemat",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }
