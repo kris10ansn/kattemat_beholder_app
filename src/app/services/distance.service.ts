@@ -5,7 +5,7 @@ import { HTTP } from '@ionic-native/http/ngx';
 	providedIn: 'root'
 })
 export class DistanceService {
-	private readonly url = 'http://REMOVED_IP_ADRESS:8080/';
+	private readonly url = 'http://***REMOVED***:8080/';
 
 	constructor(private http: HTTP) {}
 

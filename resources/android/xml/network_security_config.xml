@@ -4,6 +4,6 @@
         <domain includeSubdomains="true">localhost</domain>
     </domain-config>
 	<domain-config cleartextTrafficPermitted="true">
-        <domain includeSubdomains="true">REMOVED_IP_ADRESS</domain>
+        <domain includeSubdomains="true">***REMOVED***</domain>
     </domain-config>
 </network-security-config>
